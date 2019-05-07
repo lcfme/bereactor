@@ -323,8 +323,6 @@ function createElement(type, conf) {
 exports = module.exports = createElement;
 
 },{}],8:[function(require,module,exports){
-const Reconciler = require("./reconciler");
-
 function DomComponent(element) {
   this.name = "DomComponent";
   this.currentElement = element;
@@ -472,7 +470,7 @@ Object.assign(DomComponent.prototype, {
 
 module.exports = DomComponent;
 
-},{"./reconciler":11}],9:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 const CallbackQueue = require("./cbq");
 
 module.exports = {
