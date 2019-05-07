@@ -1,0 +1,20 @@
+{
+  "name": "@bereactor/bereactor",
+  "version": "0.0.0",
+  "main": "bundle.js",
+  "author": "Liu Chaofan",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "browserify-hmr": "^0.3.7",
+    "http-server": "^0.11.1",
+    "watchify": "^3.11.1"
+  },
+  "scripts": {
+    "start": "sh run.sh",
+    "build": "NODE_ENV=production browserify index.js -o bundle.js"
+  }
+}
