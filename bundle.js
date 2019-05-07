@@ -361,13 +361,14 @@ Object.assign(DomComponent.prototype, {
         }
         this.renderedChildren[i] = this.instantiateComponent(child);
       }
+      const childrenDom = this.renderedChildren.map(child =>
+        child.mountComponent(node)
+      );
+      childrenDom.forEach(cdom => {
+        node.appendChild(cdom);
+      });
     }
-    const childrenDom = this.renderedChildren.map(child =>
-      child.mountComponent(node)
-    );
-    childrenDom.forEach(cdom => {
-      node.appendChild(cdom);
-    });
+
     return node;
   },
   receiveComponent(nextElement) {
