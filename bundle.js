@@ -558,9 +558,12 @@ const hooks = require("./hooks");
 const instantiateComponent = require("./instantiatecomponent");
 const Reconciler = {
   mountRootComponentIntoContainer(element, container) {
+    if (container.__bereactor__) {
+      container.__bereactor__.unmountComponent();
+      delete container.__bereactor__;
+    }
     if (container.innerHTML) {
       container.innerHTML = "";
-      delete container.__bereactor__;
     }
     hooks.ComponentDidMount.reset();
     const ins = instantiateComponent(element);
