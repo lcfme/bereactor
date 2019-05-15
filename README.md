@@ -1,3 +1,3 @@
-# ABOUT ME
+# 300 行代码简单实现一个 React-like 框架
 
-野生的初级前端工程师一枚，对前端框架、各种 parser 都感兴趣。
+知乎文章链接 🔗 https://zhuanlan.zhihu.com/p/64949640
